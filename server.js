@@ -91,7 +91,7 @@ async function main() {
 // EXPRESS WEBSITE PATH..?
 
 app.get("/", async function(req,res) {
-    res.sendFile('index.html',{ root: __dirname })
+    res.sendFile('Login.html',{ root: __dirname })
 })
 
 app.get("/signup", async function(req, res) {
