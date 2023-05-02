@@ -129,6 +129,6 @@ app.get("/login", async function(req, res) {	// http://<DOMAIN>/login?email=EMAI
 })
 
 // START SERVER
-http.listen(port, '0.0.0.0' ,() => {
-    console.log(`Socket.IO server running at http://localhost:${port}/`)
+app.listen(port, '0.0.0.0' ,() => {
+    console.log(`Server is running!\nPORT : ${port}`)
 })
