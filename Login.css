@@ -252,7 +252,7 @@ body {
     padding-top: 5px;
 }
 
-.smallText {
+.smalltext {
     color: #f24c50;
     font-size: 15px;
     font-weight: bold;
@@ -263,4 +263,19 @@ body {
 .SignUp-place {
     text-align: center;
     color: #FFFFFF;
+}
+
+.Loading-Anim {
+    display: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 7px solid #FFFFFF;
+    border-top: 7px solid #23272A;
+    animation: rotating 1s linear infinite;
+    margin: 0 auto;
+}
+
+.Submit-Label {
+    display: block;
 }
