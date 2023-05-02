@@ -67,13 +67,13 @@ window.onload = function() {
 
     		if(!em_regex.test(email)) {
     			document.getElementById("EnvelopeSvgs").innerHTML = `
-    				<img src="Envelope_invalid.svg" style="width: 45px;height: 45px;">
+    				<img src="/Envelope_invalid.svg" style="width: 45px;height: 45px;">
     			`
     			return
     		}
 
     		document.getElementById("EnvelopeSvgs").innerHTML = `
-				<img src="Envelope_valid.svg" style="width: 45px;height: 45px;">
+				<img src="/Envelope_valid.svg" style="width: 45px;height: 45px;">
     		`
     	})
     }

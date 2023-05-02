@@ -91,10 +91,7 @@ async function main() {
 // EXPRESS WEBSITE PATH..?
 
 app.get("/", async function(req,res) {
-    res.send({
-    	status: 200,
-    	message: "SERVER IS ONLINE"
-    })
+    res.sendFile('index.html',{ root: __dirname })
 })
 
 app.get("/signup", async function(req, res) {
