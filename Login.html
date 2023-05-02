@@ -6,262 +6,23 @@
         <link rel="stylesheet" href="Login.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <script src="/Login.js"></script>
+        <link rel="stylesheet" type="text/css" href="/Login.css">
     </head>
     <body>
-        <style>
-            *, html {
-                scroll-behavior: smooth;
-                font-family:'Poppins', sans-serif;
-                -webkit-tap-highlight-color: transparent;
-            }
+        <div class="bg"></div>
 
-            body {
-                margin: 0;
-                padding: 0;
-                /* background-image: url('LoginSvg.svg'); */
-            }
-        </style>
-        <div style="
-            width: 100%;
-            height: 100vh;
-            background-image: url('/LoginImg.png');
-            position: fixed;
-            background-position: bottom center, 50%, 50%;
-            background-repeat: repeat-x;
-        "></div>
-
-        <div class="LoginForm_Wrapper" style="
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-        ">
-            <div class="LoginForm" style="
-                width: 85vw;
-                max-width: 860px;
-                height: fit-content;
-                padding:  1em;
-                margin: 0 auto;
-                color: #23272A;
-                background: rgba(35, 39, 42, 0.3);
-                backdrop-filter: blur(20px);
-                border-radius:  15px;
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-            ">
-                <div style="
-                    width: fit-content;
-                    margin: 0 auto;
-                    font-size: 35px;
-                    font-weight: Bold;
-                ">Login</div>
-
-                <style>
-                    :root {
-                        --forml_color: #FFFFFF;
-                    }
-
-                    @keyframes rotating {
-                        0% { transform: rotate(0deg) }
-                        100% { transform: rotate(360deg) }
-                    }
-
-                    @media only screen and (max-width: 800px) {
-                        .LoginForm_Wrapper {
-                            background: rgba(35, 39, 42, .3);
-                            backdrop-filter: blur(20px) !important;
-                        }
-
-                        .LoginForm {
-                            transform: none !important;
-                            top: 0 !important;
-                            margin-top:  15vh !important;
-                            border-radius: 0px !important;
-                            backdrop-filter: blur(0px) !important;
-                            background: none !important;
-                            width: 100dw !important;
-                            padding: .3em !important;
-                        }
-                    }
-
-                    .UserEmail {
-                        margin-top: 40px;
-                    }
-
-                    .UserPassword::-ms-reveal {
-                        display: none;
-                    }
-
-                    .UserEmail,
-                    .UserPassword {
-                        width: 100%;
-                        height: 55px;
-                        text-align: center;
-                        font-size: 20px;
-                        color: #FFFFFF;
-                        backdrop-filter: blur(20px);
-                        border-radius: 50px;
-
-                        border: none;
-                        outline: none;
-                        transition: .5s;
-                        background: rgba(35, 39, 42, 0.4);
-                    }
-
-                    .UserEmail::placeholder,
-                    .UserPassword::placeholder {
-                        color: #FFFFFF;
-                    }
-
-                    .UserEmail:focus,
-                    .UserPassword:focus {
-                        transition: .5s;
-                        background: rgba(35, 39, 42, 0.8);
-                    }
-
-                    .UserPassword {
-                        margin-top: 20px;
-                    }
-
-                    .Submit {
-                        margin-top: 15px;
-                    }
-
-                    .password-type-changer {
-                        position:  absolute;
-                        width: fit-content;
-                        display: block;
-                        position: relative;
-                        padding-left: 28px;
-                        padding-top: 4.5px;
-                        margin-bottom: 12px;
-                        cursor: pointer;
-                        font-size: 13px;
-                        color: #23272A;
-                    }
-
-                    .checkmark-input {
-                        position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                        height: 0;
-                        width: 0;
-                        border-radius: 6px;
-                    }
-
-                    .checkmark-span {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 25px;
-                        width: 25px;
-                        background: rgba(35, 39, 42, 0.3);
-                        border-radius: 6px;
-                    }
-
-                    .checkmark-span:hover {
-                        background: rgba(35, 39, 42, 0.8);
-                    }
-
-                    .checkmark-input:checked ~ .checkmark-span{
-                        background: rgba(35, 39, 42, 1);
-                    }
-
-                    .checkmark-span:after {
-                        content: "";
-                        position: absolute;
-                        display: none;
-                    }
-
-                    .password-type-changer .checkmark-input:checked ~ .checkmark-span:after {
-                        display: block;
-                    }
-
-                    .password-type-changer .checkmark-span:after {
-                        left: 10px;
-                        top:  5px;
-                        width: 4px;
-                        height: 10px;
-                        border: solid white;
-                        border-width: 0 3px 3px 0;
-                        transform: rotate(45deg);
-                    }
-
-                    .Submit {
-                        margin-top: 60px;
-                        width: 100%;
-                        height: 55px;
-                        border-radius: 50px;
-
-                        outline: none;
-                        border: none;
-                        background-color: #d9d9d9;
-                        font-weight: bold;
-                        font-size: 18px;
-                        transition: .3s;
-                    }
-
-                    .Submit:hover {
-                        transition: .3s;
-                        background-color: #8c8c8c;
-                        color: #ffffff;
-                    }
-
-                    .Submit:active {
-                        transition: .3s;
-                        background: rgba(35, 39, 42, 0.8)
-                    }
-
-                    .SignUp {
-                        margin-top: 10px;
-                        width: 100%;
-                        height: 55px;
-                        border-radius: 50px;
-
-                        outline: none;
-                        border: none;
-                        background-color: #d9d9d9;
-                        font-weight: bold;
-                        font-size: 18px;
-                        transition: .3s;
-                    }
-
-                    .SignUp:hover {
-                        transition: .3s;
-                        background-color: #8c8c8c;
-                        color: #ffffff;
-                    }
-
-                    .SignUp:active {
-                        transition: .3s;
-                        background: rgba(35, 39, 42, 0.8)
-                    }
-                </style>
-
+        <div class="LoginForm_Wrapper" style="">
+            <div class="LoginForm" style="">
+                <div class="LgText" style="">Login</div>
                 <div>
-                    <div id="EnvelopeSvgs" style="
-                        position: absolute;
-                        margin-top: 47px;
-                        margin-left: 20px;
-                        z-index: 10;
-                        width: 45px;
-                        height: 45px;
-                    ">
-                        <img src="/Envelope.svg" style="
-                            width: 45px;
-                            height: 45px;
-                        ">
+                    <div class="EnvelopeSvgs" id="EnvelopeSvgs" style="">
+                        <img class="EnvlopImg" src="/Envelope.svg" style="">
                     </div>
                     <input label="Email" type="email" class="UserEmail" placeholder="Email" id="emailForm">
                 </div>
                 <input label="Password" type="password" class="UserPassword" placeholder="Password" id="passwordForm">
-                <div class="selection-place" style="margin-top: 15px;">
-                    <a href="#" style="
-                        float: right;
-                        text-decoration: none;
-                        font-size: 13px;
-                        padding-top: 5px;
-                    ">Lupa Password?</a>
+                <div class="selection-place" style="">
+                    <a class="Fpassword" href="#" style="">Lupa Password?</a>
                     <label class="password-type-changer">Munculkan Password
                         <input class="checkmark-input" type="checkbox" id="checkmark-input">
                         <span class="checkmark-span" id="checkmark-span"></span>
@@ -270,24 +31,12 @@
                 <button class="Submit" id="submitForm">
                     Submit
                 </button>
-                <div id="smalltext" style="
-                    color: #f24c50;
-                    font-size: 15px;
-                    font-weight: bold;
-                    margin-top: 6px;
-                    text-align: center;
-                ">
+                <div class="smalltext" id="smalltext" style="">
                     &nbsp;
                 </div>
-
-                <div style="
-                    text-align: center;
-                    color: #FFFFFF;
-                ">
+                <div class="SignUp-place" style="">
                     ━━━━━✦ Atau ✦━━━━━
-                    <button class="SignUp" id="submitForm">
-                        Sign-Up
-                    </button>
+                    <button class="SignUp" id="submitForm">Sign-Up</button>
                 </div>
             </div>
         </div>
