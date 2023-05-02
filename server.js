@@ -3,7 +3,7 @@ var cors = require('cors')
 // EXPRESS
 const express = require('express')
 const app = express()
-const port = process.env.PORT || "0.0.0.0"
+const port = process.env.PORT || 3000
 
 app.use(express.static(__dirname + '/'))
 app.use(cors({ origin: '*' }));
@@ -129,6 +129,6 @@ app.get("/login", async function(req, res) {	// http://<DOMAIN>/login?email=EMAI
 })
 
 // START SERVER
-http.listen(port, () => {
+http.listen(port, '0.0.0.0' ,() => {
     console.log(`Socket.IO server running at http://localhost:${port}/`)
 })
