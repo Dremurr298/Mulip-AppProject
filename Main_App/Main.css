@@ -1,0 +1,11 @@
+*, html {
+    scroll-behavior: smooth;
+    font-family:'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-image: url('LoginSvg.svg'); */
+}

@@ -3,24 +3,34 @@
     <head>
         <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="Login.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-        <script src="/Login.js"></script>
-        <link rel="stylesheet" type="text/css" href="/Login.css">
+        <script src="/Login-SignUp/Login.js"></script>
+        <link rel="stylesheet" type="text/css" href="/Login-SignUp/Login.css">
     </head>
     <body>
         <div class="bg"></div>
 
         <div class="LoginForm_Wrapper" style="">
             <div class="LoginForm" style="">
-                <div class="LgText" style="">Login</div>
+                <div id="LgText" class="LgText" style="">Login</div>
                 <div>
                     <div class="EnvelopeSvgs" id="EnvelopeSvgs" style="">
-                        <img class="EnvlopImg" src="/Envelope.svg" style="">
+                        <img class="EnvlopImg" src="/Login-SignUp/Envelope.svg" style="">
                     </div>
-                    <input label="Email" type="email" class="UserEmail" placeholder="Email" id="emailForm">
+                    <input label="Email" type="email" class="UserEmail" placeholder="Email" id="emailForm" required>
                 </div>
-                <input label="Password" type="password" class="UserPassword" placeholder="Password" id="passwordForm">
+                <div class="UNameSelector" id="UName">
+                    <div class="UserNameSvgs" id="" style="">
+                        <img class="UserNameImg" src="/Login-SignUp/name-card.svg" style="">
+                    </div>
+                    <input label="UserName" type="text" class="UserName" placeholder="Nama Akun" id="NameForm" required>
+                </div>
+                <div>
+                    <div class="PasswordSvgs" id="" style="">
+                        <img class="PasswordImg" src="/Login-SignUp/padlock.svg" style="">
+                    </div>
+                    <input label="Password" type="password" class="UserPassword" placeholder="Password" id="passwordForm" required>
+                </div>
                 <div class="selection-place" style="">
                     <a class="Fpassword" href="#" style="">Lupa Password?</a>
                     <label class="password-type-changer">Munculkan Password
@@ -37,7 +47,7 @@
                 </div>
                 <div class="SignUp-place" style="">
                     ━━━━━✦ Atau ✦━━━━━
-                    <button class="SignUp" id="submitForm">Sign-Up</button>
+                    <button class="SignUp" id="Switcher">Sign-Up</button>
                 </div>
             </div>
         </div>
